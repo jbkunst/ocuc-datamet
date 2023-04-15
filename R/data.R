@@ -40,9 +40,18 @@ data_geo <- tbl_geoserver |>
   }) |>
   bind_rows()
 
+tbl_geoserver |>
+  as_tibble() |>
+  count(resultado)
+
+tbl_geoserver |>
+  filter(resultado == "error")
+
 data_geo |>
   as_tibble() |>
   count(archivo)
 
 mapview::mapview(data_geo)
+
+saveRDS(data_geo, "data_geo.rds")
 
