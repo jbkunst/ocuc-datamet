@@ -63,7 +63,7 @@ tbl_geoserver |> distinct(nombre)         |> count()
 archivos <- tbl_geoserver |>
   pull(nombre)
 
-# para ver cuales dieron error
+# revisa que archivos tienen columnas bip y las descarga
 resultados <- map(archivos, safely(function(nombre = "sit:violencia_intrafamiliar_698_4326"){
 
     cli::cli_progress_step(nombre)
@@ -110,4 +110,7 @@ tbl_geoserver <- tbl_geoserver |>
   )
 
 readr::write_csv(tbl_geoserver, "data/tbl_geoserver.csv")
+
+tbl_geoserver |>
+  filter(resultado == "error")
 
