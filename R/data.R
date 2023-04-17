@@ -49,7 +49,12 @@ tbl_geoserver |>
 
 data_geo |>
   as_tibble() |>
-  count(archivo)
+  count(cod_bip) |>
+  count(n)
+
+data_geo |>
+  as_tibble() |>
+  distinct(cod_bip)
 
 mapview::mapview(data_geo)
 
