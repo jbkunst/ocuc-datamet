@@ -13,6 +13,7 @@ pjs
 # session
 url_geo_server <- "https://sitmds.ministeriodesarrollosocial.gob.cl/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.MapPreviewPage"
 url_geo_json_template <- "https://sitmds.ministeriodesarrollosocial.gob.cl/geoserver/sit/ows?service=WFS&version=1.0.0&request=GetFeature&typeName={nombre}&maxFeatures=80000&outputFormat=application%2Fjson"
+url_geo_json_template <- "https://sitmds.ministeriodesarrollosocial.gob.cl/geoserver/sit/ows?service=WFS&version=1.0.0&request=GetFeature&typeName={nombre}&maxFeatures=80000"
 
 ses <- Session$new(port = pjs$port)
 ses$go(url_geo_server)
@@ -64,7 +65,7 @@ archivos <- tbl_geoserver |>
   pull(nombre)
 
 # revisa que archivos tienen columnas bip y las descarga
-resultados <- map(archivos, safely(function(nombre = "sit:violencia_intrafamiliar_698_4326"){
+resultados <- map(archivos, safely(function(nombre = "sit:mlineas_bip2_1"){
 
     cli::cli_progress_step(nombre)
 
@@ -73,6 +74,7 @@ resultados <- map(archivos, safely(function(nombre = "sit:violencia_intrafamilia
     url_geo_json <- str_glue(url_geo_json_template, nombre = nn)
 
     layer <- st_read(dsn = url_geo_json, quiet = TRUE)
+    # mapview::mapview(layer)
 
     # si tiene codigo_bip o cod_bip
     if(any(str_detect(names(layer), "codigo_bip|cod_bip"))){
