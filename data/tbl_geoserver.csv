@@ -56,7 +56,7 @@ pagina,nombre,titulo,resultado
 3,sit:regiones_siist,Regiones,no posee bip
 3,sit:chile_atiede_adis_863_4326,chile_atiede_adis_863_4326,no posee bip
 3,sit:sitac_campamentos_v__676_4326,Campamentos,no posee bip
-3,sit:pci___803_4326,pci___803_4326,error
+3,sit:pci___803_4326,pci___803_4326,descargado
 3,sit:cse,cse,no posee bip
 3,sit:limites 2018 nuble,Límites administrativos,no posee bip
 3,sit:adis_estab_prekinder_kinder_828_4326,adis_estab_prekinder_kinder_828_4326,no posee bip
@@ -75,7 +75,7 @@ pagina,nombre,titulo,resultado
 3,sit:zoom_mapi,zoom_mapi,no posee bip
 3,sit:Ptos 2017 gasto,Gasto,descargado
 4,sit:establ_sala_cuna_998_4326,establ_sala_cuna_998_4326,no posee bip
-4,sit:mpuntos_fusion,mpuntos_fusion,error
+4,sit:mpuntos_fusion,mpuntos_fusion,descargado
 4,sit:sitac_mat_mhc_re_820_4326,Establ. con matricula en educación media humanístico científico,no posee bip
 4,sit:rcmp___centros_de_negocio_780_4326,Centros de Negocio,no posee bip
 4,sit:comunas_siist,comunas_siist_858_4326,no posee bip
@@ -221,7 +221,7 @@ pagina,nombre,titulo,resultado
 9,sit:centros_de_atencion_apoyo_a_viictimas_763_4326,Centros de Atención a Víctimas,no posee bip
 9,sit:multilineas_bip2_old,multilineas_bip2_622_4326,descargado
 9,sit:sitac_h_ninis_693_4326,Ninis (jóvenes entre 15-29 años),no posee bip
-9,sit:Mpuntos_bip2_1,Mpuntos_bip2_1,error
+9,sit:Mpuntos_bip2_1,Mpuntos_bip2_1,descargado
 9,sit:cse_unidades_vecinales_2022,cse_unidades_vecinales_2022,no posee bip
 9,sit:Unidades_Vecinales_2021_octubre_2022,Unidades_Vecinales_2021_octubre_2022,no posee bip
 10,sit:Establecimientos INTEGRA,Establecimientos INTEGRA,no posee bip
